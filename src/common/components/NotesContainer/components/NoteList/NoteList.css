@@ -1,0 +1,9 @@
+.NoteList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.NoteList > li {
+  display: inline-block;
+}

@@ -1,0 +1,57 @@
+div.Note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 var(--space-small) var(--space-small) 0;
+  padding: var(--space-default);
+  position: relative;
+  width: 280px;
+  min-height: 175px;
+  animation: jumpIn var(--animation-timing-superfast) ease-out;
+}
+
+div.Note.DEFAULT {
+  background: linear-gradient(-45deg, transparent, transparent 	1.41421rem, var(--color-note-default) 	1.41421rem, var(--color-note-default));
+}
+
+div.Note.INFO {
+  background: linear-gradient(-45deg, transparent, transparent 	1.41421rem, var(--color-note-info) 	1.41421rem, var(--color-note-info));
+}
+
+div.Note.DANGER {
+  background: linear-gradient(-45deg, transparent, transparent 	1.41421rem, var(--color-note-danger) 	1.41421rem, var(--color-note-danger));
+}
+
+div.Note.SUCCESS {
+  background: linear-gradient(-45deg, transparent, transparent 	1.41421rem, var(--color-note-success) 	1.41421rem, var(--color-note-success));
+}
+
+div.Note h2 {
+  overflow: hidden;
+}
+
+div.Note .information-list {
+  overflow: hidden;
+}
+
+@keyframes jumpIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+div.Note::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-width: 2rem 2rem 0 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15) transparent;
+}
